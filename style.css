@@ -10,48 +10,52 @@
 
 body {
     background: var(--bg-color);
-  
+
 }
 
 .nav {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* логотип слева, меню справа */
-  height: 90px;
-  box-sizing: border-box;
-border: 2px solid transparent;
-box-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
-0 0 40px rgba(89, 90, 89, 0.6),
-0 0 60px rgba(49, 51, 49, 0.4);
-height: 90px;
-font-size: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* логотип слева, меню справа */
+    height: 90px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(89, 90, 89, 0.6),
+        0 0 60px rgba(49, 51, 49, 0.4);
+    height: 90px;
+    font-size: 18px;
 }
 
 .logo {
-  margin-left: 20px; /* вместо left: 20px */
+    margin-left: 20px;
+    /* вместо left: 20px */
 }
 
 ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 ul li {
-  position: relative; /* можно оставить, если нужны эффекты */
-  padding: 0 20px;    /* отступы между пунктами */
-  right: 30%;
-  
+    position: relative;
+    /* можно оставить, если нужны эффекты */
+    padding: 0 20px;
+    /* отступы между пунктами */
+    right: 30%;
+
 }
 
 ul li a {
-  color: rgba(236, 234, 230, 0.753);
-  text-decoration: none;
-  transition: transform 0.3s ease;
-  display: block;
-  position: relative;
+    color: rgba(236, 234, 230, 0.753);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: block;
+    position: relative;
 }
 
 
@@ -68,7 +72,14 @@ ul li a {
     top: 1px;
     left: 20px;
 }
-
+.container {
+    display: block;
+    text-align: center;
+}
+.info {
+    position: relative;
+    right: 100px;
+}
 .logo img {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.301),
@@ -78,8 +89,10 @@ ul li a {
 
 .text-info {
     display: inline-block;
+    position: relative;
     font-size: 20px;
     color: #ffffffb6;
+    padding-right: 50px;
 }
 
 .text-info p {
@@ -94,8 +107,12 @@ ul li a {
 .foto-info img {
     display: block;
     position: relative;
-    width: 400px;
-    height: 500px;
-    top: 0px;
+    width: 450px;
+    height: 600px;
+    top: 100px;
     left: 100px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.301), 
+    0 0 10px rgba(89, 90, 89, 0.315), 
+    0 0 10px rgba(49, 51, 49, 0.938);
 }
