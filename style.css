@@ -19,14 +19,13 @@ body {
     align-items: center;
     justify-content: space-between;
     /* логотип слева, меню справа */
-    height: 90px;
     box-sizing: border-box;
     border: 2px solid transparent;
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
         0 0 40px rgba(89, 90, 89, 0.6),
         0 0 60px rgba(49, 51, 49, 0.4);
     height: 90px;
-    font-size: 18px;
+    font-size: 21px;
 }
 
 .logo {
@@ -44,9 +43,9 @@ ul {
 ul li {
     position: relative;
     /* можно оставить, если нужны эффекты */
-    padding: 0 20px;
+    padding: 0 14px;
     /* отступы между пунктами */
-    right: 30%;
+    right: 35%;
 
 }
 
@@ -61,9 +60,29 @@ ul li a {
 
 .nav a:hover {
     transform: scale(1.1);
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.938),
-        0 0 40px rgb(89, 90, 89),
-        0 0 60px rgba(49, 51, 49, 0.4);
+    text-shadow: 0 0 20px rgba(134, 134, 134, 0.564),
+        0 0 20px rgba(89, 90, 89, 0.587),
+        0 0 30px rgba(49, 51, 49, 0.208);
+}
+
+.social-nav a {
+    display: inline-block;
+    position: relative;
+    padding: 0 13px;
+    text-decoration: none;
+    right: 70px;
+}
+
+.social-nav .fa-vk {
+    color: rgba(1, 126, 242, 0.801);
+}
+
+.social-nav .fa-telegram {
+    color: #4c60e6;
+}
+
+.social-nav .fa-phone {
+    color: #ffffffbd;
 }
 
 .logo {
@@ -103,7 +122,208 @@ ul li a {
     top: 100px;
     left: 100px;
     border-radius: 50px;
-    box-shadow: 0px 0px 100px rgba(255,255,255,0.301), 
-    0 0 10px rgba(89,90,89,0.315), 
-    0 0 10px rgba(49,51,49,0.938);
+    box-shadow: 0 0 80px rgba(255, 255, 255, 0.301),
+        0 0 5px rgba(89, 90, 89, 0.315),
+        0 0 5px rgba(49, 51, 49, 0.938);
+}
+
+/* Слайды блока 'Образование' */
+.education {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    bottom: 400px;
+}
+
+.slider-educ {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.slide {
+    width: 100%;
+    min-width: 100%;
+    flex-shrink: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: scale(0.95);
+    /* background: #ece9e90c; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Картинка внутри слайда */
+.slide img {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Неоновое свечение вокруг картинки */
+.slide.active img {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 10px var(--neon-color, rgb(92, 95, 95))) drop-shadow(0 0 10px var(--neon-color, rgb(92, 94, 94)))
+}
+
+:root {
+    --neon-color: rgb(137, 139, 139);
+}
+
+/* Кнопки */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ece9e90c;
+    color: #ffffff79;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+
+/* Точки */
+.dots {
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #444;
+    margin: 0 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: rgba(122, 80, 80, 0.162);
+}
+
+/* Секция Консультации */
+.cons {
+    display: block;
+    color: #ffffffcb;
+    font-size: 22px;
+
+
+}
+
+.cons-text p {
+    display: block;
+    position: relative;
+    padding: 0 220px;
+    top: 450px;
+    text-align: center;
+    left: 10%;
+    width: 80%;
+}
+
+/* Футер */
+.footer {
+    background: #33201b31;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    font-size: 17px;
+}
+
+.footer-nav a {
+    display: inline-block;
+    position: relative;
+    padding: 0 13px;
+    text-decoration: none;
+    right: 70px;
+}
+
+.footer-nav .fa-vk {
+    color: rgba(1, 126, 242, 0.801);
+}
+
+.footer-nav .fa-telegram {
+    color: #4c60e6;
+}
+
+.footer-nav .fa-phone {
+    color: #ffffffbd;
+}
+
+.footer- nav a {
+    transition: transform 0.7s ease;
+}
+
+.footer-nav a:hover {
+    transform: scale(1.0);
+    text-shadow: 0 0 20px rgba(134, 134, 134, 0.564),
+        0 0 20px rgba(89, 90, 89, 0.587),
+        0 0 30px rgba(49, 51, 49, 0.208);
+}
+
+@media(max-width: 1440px) {
+
+    /* Навигация */
+    .nav {
+        font-size: 25px;
+    }
+
+    .nav ul {
+        position: relative;
+        left: 120px;
+    }
+
+    .social-nav {
+        position: relative;
+        font-size: 24px;
+    }
+
+    /* Секция 'О себе' */
+    .info {
+        position: relative;
+        bottom: 250px;
+    }
+   .info p{
+position: relative;
+font-size: 25px;
+ }
+.foto-info img {
+    position: relative;
+    top: 350px;
+    height: 850px;
+}
+
+/* Секция 'Образование' */
+.education {
+    position: relative;
+    bottom: 630px;
+}
+
+/* Секция 'Консультации' */
+.cons {
+    position: relative;
+    bottom: 150px;
+}
 }
